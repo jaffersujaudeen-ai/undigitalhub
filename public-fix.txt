@@ -1,0 +1,1 @@
+Place public assets in the public/ folder. See founder-placeholder.svg below.
