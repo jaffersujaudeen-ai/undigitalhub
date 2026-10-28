@@ -188,6 +188,61 @@ function App() {
             <AnimatePresence mode="wait">
               <motion.div key={activeService + lang} className="service-detail" role="tabpanel" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }} transition={{ duration: 0.2 }}>
                 <span className="detail-kicker">SERVICE / {active.number}</span><h3>{lang === "en" ? active.title : active.titleTa}</h3><p>{lang === "en" ? active.description : active.descriptionTa}</p>
+                {active.id === services[0].id && (
+  <div className="website-pricing">
+    <div className="pricing-heading">
+      <span>WEBSITE DEVELOPMENT</span>
+      <h4>Choose what you need.</h4>
+      <p>Transparent starting prices. Final cost depends on your requirements.</p>
+    </div>
+
+    <div className="pricing-row">
+      <div>
+        <strong>Standard business website</strong>
+        <p>Responsive business website and essential pages.</p>
+      </div>
+      <strong>₹499–₹1,999</strong>
+    </div>
+
+    <div className="pricing-row">
+      <div>
+        <strong>WhatsApp integration</strong>
+        <p>Customer enquiry button and WhatsApp message setup.</p>
+      </div>
+      <strong>₹199–₹2,999</strong>
+    </div>
+
+    <div className="pricing-row">
+      <div>
+        <strong>Database integration</strong>
+        <p>Storage, forms, admin features and custom functionality.</p>
+      </div>
+      <strong>Custom quote</strong>
+    </div>
+
+    <div className="pricing-row">
+      <div>
+        <strong>Domain purchase</strong>
+        <p>Domain registration charged separately.</p>
+      </div>
+      <strong>Extra cost</strong>
+    </div>
+
+    <a
+      className="button button-gold pricing-cta"
+      href="#enquiry"
+      onClick={() => {
+        updateForm("service", active.id);
+        updateForm(
+          "details",
+          "I need a business website. Please discuss standard website pricing, WhatsApp integration, database requirements and domain costs with me."
+        );
+      }}
+    >
+      Request a quotation <ArrowRight size={16} />
+    </a>
+  </div>
+)}
                 <div className="detail-items">{(lang === "en" ? active.items : active.itemsTa).map(item => <span key={item}><Check size={14} />{item}</span>)}</div>
                 <div className="detail-footer"><div><small>{t.priceRange}</small><strong>{active.price}</strong></div><a href="#enquiry" onClick={() => updateForm("service", active.id)}>{t.discuss}<ArrowRight size={16} /></a></div>
               </motion.div>

@@ -1910,3 +1910,84 @@
     aspect-ratio: 16 / 10;
   }
 }
+/* Website development pricing */
+.website-pricing {
+  margin-top: 28px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  background: linear-gradient(
+    145deg,
+    rgba(224, 201, 148, 0.055),
+    rgba(23, 23, 21, 0.8)
+  );
+}
+
+.pricing-heading > span {
+  color: var(--gold);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+}
+
+.pricing-heading h4 {
+  margin: 12px 0 8px;
+  font: 600 21px "Manrope", sans-serif;
+}
+
+.pricing-heading p,
+.pricing-row p {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.8;
+  margin: 6px 0 0;
+}
+
+.pricing-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 19px 0;
+  border-top: 1px solid var(--line);
+}
+
+.pricing-row:first-of-type {
+  margin-top: 22px;
+}
+
+.pricing-row > div {
+  min-width: 0;
+}
+
+.pricing-row > div > strong {
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.pricing-row > strong {
+  color: var(--gold2);
+  font: 600 13px "Manrope", sans-serif;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.pricing-cta {
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+@media (max-width: 460px) {
+  .website-pricing {
+    padding: 16px;
+  }
+
+  .pricing-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .pricing-row > strong {
+    text-align: left;
+    white-space: normal;
+  }
+}
