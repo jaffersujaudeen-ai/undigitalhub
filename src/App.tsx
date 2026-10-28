@@ -209,7 +209,7 @@ function App() {
         <strong>WhatsApp integration</strong>
         <p>Customer enquiry button and WhatsApp message setup.</p>
       </div>
-      <strong>₹199–₹2,999</strong>
+      <strong>₹1,999–₹2,999</strong>
     </div>
 
     <div className="pricing-row">
